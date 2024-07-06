@@ -20,6 +20,18 @@ class HomePage extends StatelessWidget {
               width: MediaQuery.sizeOf(context).width*0.9,
               color: Colors.red,
               child: const Text("Aranya Mahmud"),
+            ),
+            Container(
+              height: 30,
+              width: MediaQuery.sizeOf(context).width*1,
+              color: Color.fromARGB(255, 255, 255, 255),
+        
+            ),
+            Container(
+              height: 100,
+              width: MediaQuery.sizeOf(context).width*0.9,
+              color: Color.fromARGB(255, 54, 76, 244),
+              child: const Text("Md Ifthe Kharul Alam"),
             )
           ],
         ),
