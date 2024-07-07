@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swe/mehrab/mehrab.dart';
 
 import 'home_page/home_page.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: ProjectBuild(),
     );
   }
 }
