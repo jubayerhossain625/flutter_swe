@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -55,7 +54,7 @@ class MyApp extends StatelessWidget {
           ),
           Center(
             child: Text(
-              "192 friends",
+              "193 friends",
               style: TextStyle(
                   color: Colors.grey[350],
                   fontFamily: 'Roboto',
@@ -86,7 +85,7 @@ class MyApp extends StatelessWidget {
                     mode: LaunchMode.externalNonBrowserApplication
                     );
                   },
-                  icon: const FaIcon(FontAwesomeIcons.instagram)
+                  icon: const FaIcon(FontAwesomeIcons.instagram, size: 20,)
               ),
               IconButton(
                   onPressed: () async {
@@ -95,7 +94,7 @@ class MyApp extends StatelessWidget {
                         mode: LaunchMode.externalNonBrowserApplication
                     );
                   },
-                  icon: const FaIcon(FontAwesomeIcons.xTwitter)
+                  icon: const FaIcon(FontAwesomeIcons.xTwitter, size: 20,)
               ),
               IconButton(
                   onPressed: () async {
@@ -104,7 +103,7 @@ class MyApp extends StatelessWidget {
                         mode: LaunchMode.externalNonBrowserApplication
                     );
                   },
-                  icon: const FaIcon(FontAwesomeIcons.reddit)
+                  icon: const FaIcon(FontAwesomeIcons.reddit, size: 20,)
               ),
               IconButton(
                   onPressed: () async {
@@ -113,7 +112,7 @@ class MyApp extends StatelessWidget {
                         mode: LaunchMode.externalNonBrowserApplication
                     );
                   },
-                  icon: const FaIcon(FontAwesomeIcons.linkedin)
+                  icon: const FaIcon(FontAwesomeIcons.linkedin, size: 20,)
               ),
               IconButton(
                   onPressed: () async {
@@ -122,7 +121,7 @@ class MyApp extends StatelessWidget {
                         mode: LaunchMode.externalApplication
                     );
                   },
-                  icon: const FaIcon(FontAwesomeIcons.github)
+                  icon: const FaIcon(FontAwesomeIcons.github, size: 20,)
               ),
               IconButton(
                   onPressed: () async {
@@ -131,7 +130,7 @@ class MyApp extends StatelessWidget {
                         mode: LaunchMode.externalNonBrowserApplication
                     );
                   },
-                  icon: const FaIcon(FontAwesomeIcons.discord)
+                  icon: const FaIcon(FontAwesomeIcons.discord, size: 20,)
               ),
             ],
           ),
@@ -144,6 +143,96 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontSize: 16,
               color: Colors.white
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.briefcase, color: Colors.grey[500], size: 20,),
+                    const SizedBox(width: 5,),
+                    Text(
+                      "General Member at Software Engineering Club - SEC, DIU",
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        color: Colors.grey[100],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.graduationCap, color: Colors.grey[500], size: 20,),
+                    const SizedBox(width: 5,),
+                    Text(
+                      "Studies B.Sc. in Software Engineering at Daffodil International University",
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        color: Colors.grey[100],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.house, color: Colors.grey[500], size: 20,),
+                    const SizedBox(width: 5,),
+                    Text(
+                      "Lives in Dhaka, Bangladesh",
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        color: Colors.grey[100],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.locationDot, color: Colors.grey[500], size: 20,),
+                    const SizedBox(width: 5,),
+                    Text(
+                      "From Khulna, Bangladesh",
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        color: Colors.grey[100],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.solidHeart, color: Colors.grey[500], size: 20,),
+                    const SizedBox(width: 5,),
+                    Text(
+                      "Single",
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        color: Colors.grey[100],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.rss, color: Colors.grey[500], size: 20,),
+                    const SizedBox(width: 5,),
+                    Text(
+                      "Followed by 266 people",
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        color: Colors.grey[100],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
