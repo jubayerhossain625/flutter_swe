@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swe/home_page/login_page.dart';
-import 'home_page/home_page.dart';
+import 'package:flutter_swe/home_page/sign_up.dart';
 
 void main() {
   runApp(const MyApp());

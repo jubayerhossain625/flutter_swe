@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_swe/home_page/sign_up.dart';
+import 'package:flutter_swe/home_page/login_page.dart';
 var size,height,width;
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class signup extends StatelessWidget {
+  const signup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +20,12 @@ class LoginPage extends StatelessWidget {
             Container(
             color: Colors.amber,
             width: width,
-           //height: height,
+          // height: height,
             child:
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 75, 0, 0),
                 child: Column(
-                 mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(20, 20, 0, 10),
                       child: Row(
                         children: [
-                          Text("Log in to your account",
+                          Text("Create a new account",
                           style: TextStyle(
                             color: Color.fromARGB(175, 0, 0, 0),
                             fontSize:17,
@@ -85,7 +85,7 @@ class LoginPage extends StatelessWidget {
                    ),
                  ),
                  Padding(
-                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 25),
+                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
                    child: TextFormField(
                       controller: TextEditingController(),
                       decoration: InputDecoration(
@@ -93,13 +93,35 @@ class LoginPage extends StatelessWidget {
                       ),
                      ),
                  ),
+                 Padding(
+                   padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+                   child: Row(
+                    children: [
+                                  Text("Re Enter Password",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(140, 0, 0, 0),
+                                    fontSize:15,
+                                    fontWeight:  FontWeight.bold,),
+                                  ),
+                    ],
+                   ),
+                 ),
+                 Padding(
+                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                   child: TextFormField(
+                      controller: TextEditingController(),
+                      decoration: InputDecoration(
+                        hintText: "********",
+                      ),
+                     ),
+                 ),                
                 FilledButton(
                  onPressed: (){},
-                 child: Text("  Sign in  ",),
+                 child: Text("  Sign up  ",),
                  ),
                  Padding(
                    padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
-                   child: Text("OR, Sign in with ",
+                   child: Text("OR, Sign up with ",
                         style: TextStyle(
                          color: Color.fromARGB(180, 0, 0, 0),
                            fontSize:15,
@@ -149,7 +171,7 @@ class LoginPage extends StatelessWidget {
                   width:230 ,
                    child: Row(
                      children: [
-                       Text("Don't have an account?",
+                       Text("Already have an account?",
                                      style: TextStyle(
                                         color: Color.fromARGB(140, 0, 0, 0),
                                         fontSize:13,
@@ -158,15 +180,17 @@ class LoginPage extends StatelessWidget {
                      TextButton(onPressed: (){
                       Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => signup()),
+                            MaterialPageRoute(builder: (context) => LoginPage()),
                           );
-                      },
+                     },
                       child: 
-                           Text("signup",style: TextStyle(fontSize: 14),)
+                           Text("sign in",style: TextStyle(fontSize: 14),)
                       )
                      ],
                    ),
                  ),
+                 
+                 
 
                   ],
                 ),
