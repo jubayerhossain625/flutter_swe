@@ -9,8 +9,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text("My App Bar",style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.pink,
+        leading: Icon(Icons.arrow_back),
+        actions: [
+          Icon(Icons.access_alarm),
+          Icon(Icons.face),
+          Icon(Icons.add),
+          Icon(Icons.delete),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
