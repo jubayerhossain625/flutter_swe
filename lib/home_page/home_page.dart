@@ -1,9 +1,25 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_swe/widgets/CustomText.dart';
+
+import '../widgets/customForm.dart';
 
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+
+  TextEditingController controllerFirstName = TextEditingController();
+  TextEditingController controllerLastName = TextEditingController();
+  TextEditingController controllerEmail = TextEditingController();
+  TextEditingController controllerPassword = TextEditingController();
+  TextEditingController controllerRePassword = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,69 +36,46 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 20,),
               const Align(
                   alignment: Alignment.center,
-                  child: Text("Sign Up",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),)),
+                  child: CustomTest(text: "Sign Up",fontSize: 20,fontWeight: FontWeight.bold,)),
+
               const SizedBox(height: 30,),
               const Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Create your Account",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),)),
+                  child:CustomTest(text: "Create your Account",fontSize: 20,fontWeight: FontWeight.w700)),
 
               Padding(
-                padding: const EdgeInsets.only(left:10.0,right: 10,bottom: 20),
-                child: TextFormField(
-                  controller: TextEditingController(),
-                  decoration: const InputDecoration(
-                      hintText: "First Name"
-                  ),
-                ),
+                padding: const EdgeInsets.only(left:10.0,right: 10,bottom: 20,top: 20),
+                child: CustomForm(controller:controllerFirstName ,hintText: "Enter first name",),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(left:10.0,right: 10,bottom: 20),
-                child: TextFormField(
-                  controller: TextEditingController(),
-                  decoration: const InputDecoration(
-                      hintText: "Last Name"
-                  ),
-                ),
+                child: CustomForm(controller:controllerLastName ,hintText: "Enter last name",),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(left:10.0,right: 10,bottom: 20),
-                child: TextFormField(
-                  controller: TextEditingController(),
-                  decoration: const InputDecoration(
-                    hintText: "Email or Phone number"
-                  ),
-                ),
+                child: CustomForm(controller:controllerEmail ,hintText: "Enter gmail",),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(left:10.0,right: 10,bottom: 20),
-                child: TextFormField(
-                  controller: TextEditingController(),
-                  decoration: const InputDecoration(
-                      hintText: "Password"
-                  ),
-                ),
+                child: CustomForm(controller:controllerPassword ,hintText: "Enter password",),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(left:10.0,right:10,bottom: 50),
-                child: TextFormField(
-                  controller: TextEditingController(),
-                  decoration: const InputDecoration(
-                      hintText: "Re-Password"
-                  ),
-                ),
+                child: CustomForm(controller:controllerRePassword ,hintText: "Enter re-password",),
               ),
 
               SizedBox(
                 height: 40,width: 300,
                 child: ElevatedButton(
-
-                    onPressed: (){}, child: Text("Submit")),
+                    onPressed: (){},
+                    child: const Text("Submit"),
+                ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               const Text("Or SignUp",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
               Padding(
                 padding: const EdgeInsets.only(top: 15.0),
@@ -92,13 +85,13 @@ class HomePage extends StatelessWidget {
                   children: [
                     Container(
                       height: 40,width: 50,
-                      margin: EdgeInsets.only(right: 20),
+                      margin: const EdgeInsets.only(right: 20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
                         color: Colors.white.withOpacity(0.7),
                         border: Border.all(color: Colors.blue),
                       ),
-                      child: Icon(Icons.facebook,color: Colors.blue,),
+                      child: const Icon(Icons.facebook,color: Colors.blue,),
                     ),
 
                     Container(
@@ -108,14 +101,14 @@ class HomePage extends StatelessWidget {
                         color: Colors.white.withOpacity(0.7),
                         border: Border.all(color: Colors.blue),
                       ),
-                      child: Icon(Icons.facebook,color: Colors.blue,),
+                      child: const Icon(Icons.facebook,color: Colors.blue,),
                     ),
 
                   ],
                 ),
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
               const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
