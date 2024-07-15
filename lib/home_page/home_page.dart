@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swe/widgets/CustomText.dart';
 
@@ -13,6 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  GlobalKey<FormState>  formKey = GlobalKey();
 
   TextEditingController controllerFirstName = TextEditingController();
   TextEditingController controllerLastName = TextEditingController();
@@ -20,7 +22,11 @@ class _HomePageState extends State<HomePage> {
   TextEditingController controllerPassword = TextEditingController();
   TextEditingController controllerRePassword = TextEditingController();
 
-
+submit(){
+  print("Fist Name : ${controllerFirstName.text.trim()}");
+  print("Last Name : ${controllerLastName.text}");
+  print("Email Name : ${controllerEmail.text}");
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +51,9 @@ class _HomePageState extends State<HomePage> {
 
               Padding(
                 padding: const EdgeInsets.only(left:10.0,right: 10,bottom: 20,top: 20),
-                child: CustomForm(controller:controllerFirstName ,hintText: "Enter first name",),
+                child: CustomForm(
+                  fromKey: formKey,
+                  controller:controllerFirstName ,hintText: "Enter first name",),
               ),
 
               Padding(
@@ -71,7 +79,12 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 40,width: 300,
                 child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      if(formKey.currentState!.validate()){
+                        submit();
+                      }
+
+                    },
                     child: const Text("Submit"),
                 ),
               ),
